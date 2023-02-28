@@ -1,7 +1,5 @@
 version: "3.7"
 
-
-
 services:
 
   app:
@@ -29,4 +27,13 @@ services:
         - ./:/var/www
         - ./docker-compose/nginx:/etc/nginx/conf.d
     
+  vuejs:
+      image: node:18.14.2-alpine3.17    
+      tty: true #senza questo va in loop
+      container_name: morellato_node
+      restart: unless-stopped
+      ports:
+        - 5173:80
+      volumes:
+        - ./:/var/www
       
