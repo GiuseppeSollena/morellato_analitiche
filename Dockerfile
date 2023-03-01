@@ -35,7 +35,10 @@ RUN npm install npm@latest -g && \
     npm install n -g && \
     n latest
 
+EXPOSE 5173
+CMD ["npm" "run" "dev"]
 # Set working directory
 WORKDIR /var/www
 
 USER $user
+
