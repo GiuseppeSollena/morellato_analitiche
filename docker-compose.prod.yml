@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  app: null
+  build:
+    args:
+      user: sammy
+      uid: 1000
+    context: ./
+    dockerfile: Dockerfile
+  image: morellato
+  container_name: morellato-app
+  restart: unless-stopped
+  working_dir: /var/www/
+  networks:
+    - morellato-network
+  volumes:
+    - './:/var/www'
+
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: morellato-nginx
+    restart: unless-stopped
+    ports:
+      - '8000:80'
+    networks:
+      - morellato-network
+    volumes:
+      - './:/var/www'
+      - './docker-compose/nginx:/etc/nginx/conf.d'
+
+  nodejs:
+    image: node:18.5.0-alpine3.16
+    container_name: morellato-nodejs
+    volumes:
+      - './:/var/www/'
+    working_dir: /var/www
+    networks:
+      - morellato-network
+    logging: null
+    driver: json-file
+    options:
+      max-size: 5m
+      max-file: '3'
+
+networks:
+  morellato-network:
+    driver: bridge
