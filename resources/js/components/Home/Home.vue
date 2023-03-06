@@ -11,6 +11,7 @@
                         <font-awesome-icon col size="2x" :icon="['fas', 'tasks']" />
                     </div>
                     <h1>HOME PAGE</h1>
+                    <p>descrizione</p>
                 </div>
             </div>
         </div>

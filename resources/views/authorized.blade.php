@@ -4,7 +4,7 @@
     <navbar-component></navbar-component>
 @endsection
 
-@section('statistic_body')
+@section('statistics_body')
     <statistics-section></statistics-section>
 @endsection
 

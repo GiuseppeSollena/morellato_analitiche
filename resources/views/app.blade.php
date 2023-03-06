@@ -13,6 +13,7 @@
     <div id="app">
         @yield("nav")
         @yield("welcome")
+        @yield("statistics_body")
     </div>
 
     <script src="{{asset('../js/app.js')}}"></script>

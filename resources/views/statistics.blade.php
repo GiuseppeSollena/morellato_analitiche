@@ -12,7 +12,7 @@
 
     <div id="app">
         @yield("nav")
-        @yield("statistics_body")
+        @yeld('statistics_body')
     </div>
 
     <script src="{{asset('../js/app.js')}}"></script>

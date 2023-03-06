@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('authorized');
 });
 
-Route::get('/sommatoria',function(){
-     return view('page-sommatoria');
+Route::get('/statistics',function(){
+     return view('statistics');
 });
 
-Route::get('Customer',[CustomerController::class,'index']);
+
 
