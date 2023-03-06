@@ -14,6 +14,11 @@ Morellato's Dashboard backoffice to analyze defective products
 3. Rebuild and turn on container services using either `make rebuild` or `docker-compose --file docker-compose.development.yml up -d --build`
 If you've done all the steps at least once, this command is enough to launch the container with everything you need
 
+4. Launch `make shell`:
+    - `composer require laravel/ui`
+    - `php artisan ui bootstrap`
+    - `exit`
+
 4. Execute npm install package using either `npm_install` or `docker-compose --file docker-compose.development.yml run --rm nodejs npm install`
 
 5. Execute npm run using either `make_run` or `docker-compose --file docker-compose.development.yml run --rm nodejs npm run development`
