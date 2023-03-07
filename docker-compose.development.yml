@@ -42,6 +42,16 @@ services:
     networks:
       - morellato-network
 
+  php:
+    image: php:8.1.0-fpm
+    container_name: morellato-php
+    volumes:
+      - './:/var/www/'
+    working_dir: /var/www
+    networks:
+      - morellato-network
+
+
 networks:
   morellato-network:
     driver: bridge

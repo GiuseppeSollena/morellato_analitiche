@@ -9,7 +9,8 @@
 </head>
 <body>
     <div id="app">
-        @yield("body")
+        @yield("nav")
+    
     </div>
     <script src="{{asset('../js/app.js')}}"></script>
 </body>

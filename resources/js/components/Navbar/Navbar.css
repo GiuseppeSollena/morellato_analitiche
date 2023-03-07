@@ -1,0 +1,29 @@
+.bg-navbar{
+    background-color: #00264c;
+}
+
+.blocco-section{
+    margin-left: 20px;
+}
+
+.nav-link{
+    color:white!important;
+    font-size: small;
+}
+
+.div-logo{
+    height: 37px;
+    width: 100px;
+}
+.img-logo{
+    height: 100%;
+    width: 100%;
+}
+
+.btnLogin{
+	margin-right: 10px;
+}
+
+.test{
+    background-color: red!important;
+}
