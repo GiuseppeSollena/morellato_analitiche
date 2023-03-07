@@ -1,5 +1,5 @@
 <template>
-    <n-button class="prova">LOGIN</n-button>
+    <n-button class="btn">LOGIN</n-button>
 </template>
   
   <script>
