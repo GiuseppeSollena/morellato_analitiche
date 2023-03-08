@@ -13,6 +13,7 @@ import StatisticButton from "./components/StatisticButton/StatisticButton";
 
 import Home from "./routing/Home";
 import Statistics from "./routing/Statistics";
+import DetailsTest from "./routing/DetailsTest";
 
 
 window.Vue = require("vue");
@@ -29,6 +30,11 @@ const router = createRouter({
         path: '/statistics',
         name: 'Statistics',
         component: Statistics
+      },
+      {
+        path: '/detailsTest',
+        name: 'DetailsTest',
+        component: DetailsTest
       },
     ],
   })

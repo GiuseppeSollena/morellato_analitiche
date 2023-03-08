@@ -2,7 +2,6 @@
     width: 100%;
     height: 50px;
     padding: 0;
-    overflow: hidden;
 }
 
 .bg-navbar{
@@ -87,5 +86,6 @@
     }
     .blocco-section-btn{
         padding: 8px;
+        z-index: 1;
     }
 }

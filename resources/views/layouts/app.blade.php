@@ -7,6 +7,12 @@
     <title>Morellato Analytics</title>
     <link rel="stylesheet" href="{{asset('../css/app.css')}}">
 </head>
+<style>
+body::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
 <body>
     <div id="app">
         @yield("content")

@@ -1,16 +1,16 @@
 <template>
-    <n-card title="Statistic's name">
+    <n-card :title="cardInfo.title">
         <template #header-extra>
-            #subtitle
+
         </template>
-        Card Content
+        {{ cardInfo.description }}
         <template #footer>
-            #breve descrizione
+
         </template>
         <template #action>
             <!-- <statistic-button></statistic-button> -->
             <div>
-                <a href="/">Detail</a>
+                <router-link to="/detailsTest">Details</router-link>
             </div>
         </template>
     </n-card>
@@ -24,18 +24,15 @@ import { NCard } from 'naive-ui'
 export default defineComponent({
     components: {
         NCard
-    // },
-    // data() {
-    //     return {
-    //         ComponentList: [
-    //             { title: "PRODOTTI DIFETTOSI" },
-    //             { title: "VENDITE DI GIOIELLI" },
-    //             { title: "VENDITE DI COLLANE" },
-    //             { title: "PRODOTTI RUBATI" }
-
-    //         ]
-    //     };
+    },
+    props: {
+        cardInfo: {
+            type: Object,
+            required: true
+        }
     }
+
+
 })
 
 </script>

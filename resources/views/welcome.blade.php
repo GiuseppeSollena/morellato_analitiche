@@ -4,3 +4,4 @@
 <navbar-component></navbar-component>
 <router-view></router-view>
 @endsection
+
