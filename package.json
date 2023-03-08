@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "pinia": "^2.0.14",
-        "tiny-emitter": "^2.1.0"
+        "tiny-emitter": "^2.1.0",
+        "vue-router": "^4.1.6"
     }
 }

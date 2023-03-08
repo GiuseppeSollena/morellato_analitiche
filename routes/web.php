@@ -12,17 +12,20 @@ use App\Http\Controllers\CustomerController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/{any}', function(){
-    return view('authorized');
-})->where('any','.*');
+         return view('welcome');
+ })->where('any','.*');
+
+// Route::get('/{any}', function(){
+//     return view('authorized');
+// })->where('any','.*');
 
 // Route::get('/', function () {
 //     return view('authorized');
 // });
 
-Route::get('statistics',function(){
-    return view('statistics-authorized');
-});
+// Route::get('statistics',function(){
+//     return view('statistics-authorized');
+// });
 
 // Route::get('Customer',[CustomerController::class,'index']);
