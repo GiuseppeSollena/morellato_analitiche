@@ -21,6 +21,8 @@ If you've done all the steps at least once, this command is enough to launch the
 
 4. Execute npm install package using either `npm_install` or `docker-compose --file docker-compose.development.yml run --rm nodejs npm install`
 
+4. Install vue-router to manage routing `docker-compose --file docker-compose.development.yml run --rm nodejs npm install vue-router@4`
+
 5. Execute npm run watch using either `make_watch` or `docker-compose --file docker-compose.development.yml run --rm nodejs npm run watch`
 
 6. Confirm the project was correctly built by accessing [http://localhost:8000](http://localhost:8000) on your browser. You should see '...' on your screen.
