@@ -51,6 +51,30 @@ services:
     networks:
       - morellato-network
 
+  database:
+    image: mysql:5.7
+    environment:
+      - "MYSQL_ROOT_PASSWORD=secret"
+      - "MYSQL_DATABASE=morellato-db"
+    ports:
+      - "33066:3306"
+    networks:
+      - morellato-network
+
+  phpmyadmin:
+    image: "phpmyadmin/phpmyadmin"
+    container_name: morellato_phpmyadmin
+    links:
+      - database
+    ports:
+      - "8091:80"
+    environment:
+      - "PMA_HOST=database"
+      - "PMA_USER=root"
+      - "PMA_PASSWORD=secret"
+    networks:
+      - morellato-network
+
 
 networks:
   morellato-network:
