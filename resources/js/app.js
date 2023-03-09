@@ -11,6 +11,7 @@ import StatisticsSection from "./components/StatisticsSection/StatisticsSection"
 import StatisticsCard from "./components/StatisticsCard/StatisticsCard";
 import StatisticButton from "./components/StatisticButton/StatisticButton";
 import ModalLogin from "./components/ModalLogin/ModalLogin";
+import FlagLanguage from "./components/FlagLanguage/FlagLanguage";
 
 import Home from "./routing/Home";
 import Statistics from "./routing/Statistics";
@@ -51,6 +52,7 @@ app.component("statistics-section", StatisticsSection);
 app.component("statistics-card", StatisticsCard);
 app.component("statistic-button", StatisticButton);
 app.component("modal-login", ModalLogin);
+app.component("flag-lang", FlagLanguage);
 
 
 app.mount("#app");
