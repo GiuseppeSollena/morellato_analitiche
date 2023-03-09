@@ -1,29 +1,18 @@
 <template>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <!-- <statistics-card v-for="card in cards" :card-info="card" :key="card.id"></statistics-card> -->
-            </div>
-        </div>
-    </div>
-
-
-
-    
      <div class="container">
   <div class="row g-2">
     <div class="col-6">
-      <div class="p-3 border bg-light"><statistics-card :card-info="card1"></statistics-card></div>
+      <div class="p-3 border bg-light card"><statistics-card :card-info="card1"></statistics-card></div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><statistics-card :card-info="card2"></statistics-card></div>
+      <div class="p-3 border bg-light card"><statistics-card :card-info="card2"></statistics-card></div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><statistics-card :card-info="card3"></statistics-card></div>
+      <div class="p-3 border bg-light card"><statistics-card :card-info="card3"></statistics-card></div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><statistics-card :card-info="card4"></statistics-card></div>
+      <div class="p-3 border bg-light card"><statistics-card :card-info="card4"></statistics-card></div>
     </div>
   </div>
 </div> 

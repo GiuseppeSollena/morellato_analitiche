@@ -2,3 +2,6 @@
     color: white;
     border: none;
 }
+.indexino{
+    z-index: 2;
+}

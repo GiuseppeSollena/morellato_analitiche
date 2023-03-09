@@ -1,5 +1,5 @@
 <template>
-    <n-card :title="cardInfo.title">
+    <n-card :title="cardInfo.title" class="card">
         <template #header-extra>
 
         </template>
