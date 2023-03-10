@@ -25,6 +25,10 @@
                 <div class="blocco-btnLogin">
                         <login-btn></login-btn>
                 </div>
+
+                <div class="blocco-flagLang">
+                    <flag-lang></flag-lang>
+                </div>
             </div>
         </div>
 
