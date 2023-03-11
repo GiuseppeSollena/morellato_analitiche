@@ -1,0 +1,20 @@
+.icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+.menu{
+    --bs-dropdown-min-width:4rem;
+}
+.text2{
+    color: black;
+}
+.text1{
+    color: white
+}
+
+/* btn-group body{
+   color: #ffc107;
+
+} */

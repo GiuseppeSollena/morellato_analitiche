@@ -1,6 +1,6 @@
 
 <template>
-  
+<!--   
   <div class="dropdown">
     <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://img.icons8.com/officexs/256/italy.png" alt=""> it
@@ -19,24 +19,54 @@
         </li>
 
     </ul>
-</div>
+</div> -->
+
+<CDropdown color="secondary" togglerText="Dropdown button" >
+  <CDropdownToggle component="a" size="sm" class="text1"><CIcon :icon="cifIt" size="sm" class="icon"/>Language</CDropdownToggle>
+  <CDropdownMenu class="menu">
+    <CDropdownItem href="#" size="sm" class="text2"><CIcon :icon="cifFr" size="sm" class="icon"/>FR</CDropdownItem>
+    <CDropdownItem href="#" class="text2"><CIcon :icon="cifGb" size="sm" class="icon"/>EN</CDropdownItem>
+    <CDropdownItem href="#" class="text2"><CIcon :icon="cifIt" size="sm" class="icon"/>IT</CDropdownItem>
+  </CDropdownMenu>  
+</CDropdown>
+
+
+<!-- class="align-middle" -->
 
 </template>
 
 <script>
+import { CDropdownMenu } from '@coreui/vue';
+import { CDropdown } from '@coreui/vue';
+import { CDropdownToggle } from '@coreui/vue';
+import { CDropdownItem } from '@coreui/vue';
+import { CDropdownDivider } from '@coreui/vue';
+import { defineComponent } from 'vue';
+import { CIcon } from '@coreui/icons-vue';
 
+import{cifFr, cifGb, cifIt} from '@coreui/icons';
+
+export default defineComponent({
+    components:{
+        CDropdownMenu,
+        CDropdown,
+        CDropdownToggle,
+        CDropdownDivider,
+        CDropdownItem,
+        CIcon,
+        
+    },
+    setup(){
+        return{
+            cifFr,
+            cifGb,
+            cifIt,
+        }
+        
+    },
+})
 
 </script>
 
-<style >
-	img{
-        width: 20px;
-        height: 20px;
-    }
-
-    a{
-        text-decoration: none;
-        color: white;
-    }
-</style>
+<style src="./FlagLanguage.css" scoped/>
 
