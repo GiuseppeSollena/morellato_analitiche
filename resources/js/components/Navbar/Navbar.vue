@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-navbar div-principale-nav">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-navbar div-principale-nav">
         <div class="container-fluid container2">
             
             <div class="blocco-logo ">
@@ -18,7 +18,6 @@
             <div class="collapse navbar-collapse blocco-section-btn bg-navbar" id="navbarNavAltMarkup">
                 <div class="blocco-section d-flex">
                     <div class="navbar-nav" v-for="(elem, index) in navElemList" v-bind:key="index">
-                        <!-- <a class="nav-link" :href=elem.link> {{ elem.label }} </a> -->
                         <router-link class="nav-link" :to=elem.link> {{ elem.label }}</router-link>
                     </div>
                 </div>
@@ -32,18 +31,46 @@
             </div>
         </div>
 
-    </nav>
+    </nav> -->
+
+    <CNavbar expand="lg" color-scheme="light" class="bg-navbar">
+        <CContainer fluid>
+            <CNavbarBrand href="#">Navbar</CNavbarBrand>
+            <CNavbarToggler aria-label="Toggle navigation" aria-expanded={visible} @click="visible = !visible" />
+            <CCollapse class="navbar-collapse" :visible="visible">
+                <CNavbarNav v-for="(elem, index) in navElemList" v-bind:key="index">
+                    <CNavItem>
+                        <CNavLink>
+                            <router-link class="nav-link" :to=elem.link> {{ elem.label }}</router-link>
+                        </CNavLink>
+                    </CNavItem>
+                </CNavbarNav>
+            </CCollapse>
+        </CContainer>
+    </CNavbar>
 </template>
 
 <script>
+import {CNavbarBrand,CNavbar,CNavbarNav,CNavItem,CNavLink,CContainer,CCollapse,CNavbarToggler} from "@coreui/vue";
 export default {
+    components: {
+    CNavItem,
+    CNavbar,
+    CNavLink,
+    CNavbarBrand,
+    CNavbarNav,
+    CContainer,
+    CCollapse,
+    CNavbarToggler,
+  },
     data() {
         return {
             navElemList: [
                 { label: "HOME", link: "/" },
                 { label: "STATISTICS", link: "/statistics" },
 
-            ]
+            ],  
+            visible: true,
         };
     }
 }
