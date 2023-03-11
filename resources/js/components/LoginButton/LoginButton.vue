@@ -1,6 +1,6 @@
 <template>
-  <n-button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">LOGIN</n-button>
-
+  <!-- <n-button data-bs-toggle="modal" data-bs-target="#staticBackdrop">LOGIN</n-button> -->
+  <CButton data-bs-toggle="modal" data-bs-target="#staticBackdrop" color="primary">LOGIN</CButton>
 
   <!-- Modal_bg -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -38,10 +38,12 @@
 <script>
 import { defineComponent } from 'vue'
 import { NButton } from 'naive-ui'
+import { CButton } from '@coreui/vue';
 
 export default defineComponent({
   components: {
-    NButton
+    NButton,
+    CButton,
   }
 })
 </script>
