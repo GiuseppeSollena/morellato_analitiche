@@ -4,9 +4,22 @@
     padding: 0;
 }
 
+.logo{
+    height: 30px;
+}
+
+.myCollapse{
+    background-color: #00264c;;
+}
+
 .bg-navbar{
     background-color: #00264c;
     height: 50px;
+}
+
+.icon-menu{
+    border-color: white;
+    box-shadow: none!important;
 }
 
 .container2{

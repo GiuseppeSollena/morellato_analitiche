@@ -31,13 +31,19 @@
             </div>
         </div>
 
-    </nav> -->
+    </nav> 
+
+
+
+-->
 
     <CNavbar expand="lg" color-scheme="light" class="bg-navbar">
-        <CContainer fluid>
-            <CNavbarBrand href="#">Navbar</CNavbarBrand>
-            <CNavbarToggler aria-label="Toggle navigation" aria-expanded={visible} @click="visible = !visible" />
-            <CCollapse class="navbar-collapse" :visible="visible">
+        <CContainer fluid class="myCollapse">
+            <CNavbarBrand href="#"> <CImage class="logo" src="https://cdn.morellato.com/media/images/logos/logo_morellato_footer_venice.png" />  </CNavbarBrand>
+            <CNavbarToggler class="icon-menu" aria-label="Toggle navigation" aria-expanded={visible} @click="visible = !visible">
+            <span><img style="max-width: 20px;max-height: 20px;" src="../../../img/icon-menu.png" alt=""></span>
+            </CNavbarToggler>
+            <CCollapse class="navbar-collapse " :visible="visible">
                 <CNavbarNav v-for="(elem, index) in navElemList" v-bind:key="index">
                     <CNavItem>
                         <CNavLink>
@@ -52,6 +58,7 @@
 
 <script>
 import {CNavbarBrand,CNavbar,CNavbarNav,CNavItem,CNavLink,CContainer,CCollapse,CNavbarToggler} from "@coreui/vue";
+import { CImage } from '@coreui/vue';
 export default {
     components: {
     CNavItem,
@@ -62,6 +69,7 @@ export default {
     CContainer,
     CCollapse,
     CNavbarToggler,
+    CImage,
   },
     data() {
         return {
@@ -70,7 +78,7 @@ export default {
                 { label: "STATISTICS", link: "/statistics" },
 
             ],  
-            visible: true,
+            visible: false,
         };
     }
 }
