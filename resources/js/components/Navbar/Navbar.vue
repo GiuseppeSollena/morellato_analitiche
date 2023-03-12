@@ -37,20 +37,29 @@
 
 -->
 
-    <CNavbar expand="lg" color-scheme="light" class="bg-navbar">
+    <CNavbar expand="lg" color-scheme="light" class="myNavbar">
         <CContainer fluid class="myCollapse">
             <CNavbarBrand href="#"> <CImage class="logo" src="https://cdn.morellato.com/media/images/logos/logo_morellato_footer_venice.png" />  </CNavbarBrand>
             <CNavbarToggler class="icon-menu" aria-label="Toggle navigation" aria-expanded={visible} @click="visible = !visible">
             <span><img style="max-width: 20px;max-height: 20px;" src="../../../img/icon-menu.png" alt=""></span>
             </CNavbarToggler>
             <CCollapse class="navbar-collapse " :visible="visible">
-                <CNavbarNav v-for="(elem, index) in navElemList" v-bind:key="index">
-                    <CNavItem>
+                <!-- <div class="blocco-section d-flex"> -->
+                    <CNavbarNav>
+                    <CNavItem v-for="(elem, index) in navElemList" v-bind:key="index">
                         <CNavLink>
-                            <router-link class="nav-link" :to=elem.link> {{ elem.label }}</router-link>
+                            <router-link class="myLink" :to=elem.link> {{ elem.label }}</router-link>
                         </CNavLink>
                     </CNavItem>
                 </CNavbarNav>
+                <!-- </div> -->
+                <div class="ms-auto div-login-btn"> 
+                    <login-btn></login-btn>
+                </div> 
+                <div class="div-flagLang">
+                    <flag-lang></flag-lang> 
+                </div>
+
             </CCollapse>
         </CContainer>
     </CNavbar>

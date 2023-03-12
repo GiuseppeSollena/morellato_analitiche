@@ -22,7 +22,7 @@
 </div> -->
 
 <CDropdown color="secondary" togglerText="Dropdown button" >
-  <CDropdownToggle component="a" size="sm" class="text1"><CIcon :icon="cifIt" size="sm" class="icon"/>Language</CDropdownToggle>
+  <CDropdownToggle component="a" size="sm" class="text1 flagPadding"><CIcon :icon="cifIt" size="sm" class="icon"/>Language</CDropdownToggle>
   <CDropdownMenu class="menu">
     <CDropdownItem href="#" size="sm" class="text2"><CIcon :icon="cifFr" size="sm" class="icon"/>FR</CDropdownItem>
     <CDropdownItem href="#" class="text2"><CIcon :icon="cifGb" size="sm" class="icon"/>EN</CDropdownItem>

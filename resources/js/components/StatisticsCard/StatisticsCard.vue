@@ -10,7 +10,7 @@
         <template #action>
             <!-- <statistic-button></statistic-button> -->
             <div>
-                <router-link to="/detailsTest">Details</router-link>
+                <router-link to="/DetailsTest">Details</router-link>
             </div>
         </template>
     </n-card>
