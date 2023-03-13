@@ -15,8 +15,9 @@ Morellato's Dashboard backoffice to analyze defective products
 If you've done all the steps at least once, this command is enough to launch the container with everything you need
 
 4. Launch `make shell` or `docker exec -it morellato-app bash`:
-    - `composer require laravel/ui`
-    - `php artisan ui bootstrap`
+    - `composer install`
+            - `composer require laravel/ui` (forse)
+            - `php artisan ui bootstrap`    (forse)
     - `exit`
 
 4. Execute npm install package using either `npm_install` or `docker-compose --file docker-compose.development.yml run --rm nodejs npm install`
