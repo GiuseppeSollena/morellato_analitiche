@@ -11,6 +11,7 @@
 <style>
     body::-webkit-scrollbar {
         display: none;
+        
     }
 </style>
 
@@ -18,13 +19,8 @@
     <div id="app">
         @yield("content")
 
-        <div class="container justify-content-center " style="margin-top:100px">
-         
-        </div>
 
-        <!--  -->
     </div>
-
 
     <script src="{{asset('../js/app.js')}}"></script>
 </body>

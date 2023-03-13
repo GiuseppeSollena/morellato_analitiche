@@ -1,19 +1,17 @@
 <template>
-  <!-- <n-button data-bs-toggle="modal" data-bs-target="#staticBackdrop">LOGIN</n-button> -->
   <CButton data-bs-toggle="modal" data-bs-target="#staticBackdrop" color="primary">LOGIN</CButton>
-
   <!-- Modal_bg -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <!-- modal_form -->
-    <div class="modal-dialog modal-dialog-centered indexino">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">LOGIN</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <!-- modal_body -->
-        <div class="modal-body">
+        <div class="modal-body ">
           <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -31,7 +29,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
   
