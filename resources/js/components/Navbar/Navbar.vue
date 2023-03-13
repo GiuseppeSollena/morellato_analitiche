@@ -44,8 +44,6 @@ export default {
             navElemList: [
                 { label: "HOME", link: "/" },
                 { label: "STATISTICS", link: "/statistics" },
-                { label: "prova", link: "/detailsTest" },
-
             ],  
             visible: false,
         };
