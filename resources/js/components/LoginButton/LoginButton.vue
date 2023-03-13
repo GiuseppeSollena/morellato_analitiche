@@ -25,7 +25,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Sign in</button>
+          <button type="button" @click="showAlert" class="btn btn-primary">Sign in</button>
         </div>
       </div>
     </div>
@@ -41,8 +41,24 @@ export default defineComponent({
   components: {
     NButton,
     CButton,
+  },
+  name: 'LoginButton',
+  methods: {
+    showAlert() {
+      alert('Questo è un alert!');
+    },
+    checkLogin(){
+      //metodo che fa chiamata asincrona post ad api /login 
+      //settaggio cookie con il token jwt nella response 
+    },
   }
 })
+
+
+
+
+
+
 </script>
 
 <style src="./LoginButton.css" scoped></style>
