@@ -1,91 +1,52 @@
-.div-principale-nav{
-    width: 100%;
+.myNavbar{
+    background-color: #00264c;
     height: 50px;
     padding: 0;
 }
 
-.bg-navbar{
-    background-color: #00264c;
-
+.logo{
+    height: 30px;
 }
 
-.container2{
- height: 40px;
- padding: 0;
-
-}
-
-.blocco-logo{
-    width: 5%;
-    margin-right: 20px;
-    margin-left: 20px;
-
-}
-.blocco-section-btn{
-    width: 90%;
-}
-
-.blocco-section{
-    width: 92%;
-}
-.blocco-btnLogin{
-    width: 8%;
-}
-
-.nav-link{
+.myLink{
+    padding: 0;
     color:white!important;
-    /* font-size: small; */
+    text-decoration: none;
 }
 
-.div-logo{
-    height: 30px;
-    width: 60px;
-
-}
-.img-logo{
-    height: 100%;
-    width: 100%;
+.myCollapse{
+    background-color: #00264c;;
 }
 
-.btnLogin{
-	margin-right: 10px;
+.icon-menu{
+    border-color: white;
+    box-shadow: none!important;
 }
 
-
-.btn-menu{
- border-color: transparent;
- box-shadow: none!important;
-
- /* box-shadow: white!important; */
+.div-login-btn{
 }
 
-.img-menu{
-    width: 30px;
-    height: 30px;
-}
-.test{
-    background-color: red!important;
+.div-flagLang{
+    padding-top: 8px;
+    padding-bottom: 8px;
+     margin-right: 10px; 
 }
 
-@media only screen and (min-width: 1000px) {
-    .test {
-     background-color: rgb(173, 230, 195)!important;
+.prova{
+    position: static;
+}
+
+@media only screen and (max-width: 991px){
+    .div-login-btn{
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
-
-
-  }
-
-@media only screen  and (max-width: 1000px){
-    .blocco-logo{
-        height: 40px;
-        width: 100px;
+    .div-flagLang{
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
-    .blocco-section{
-        display: block!important;
-
-    }
-    .blocco-section-btn{
-        padding: 8px;
-        z-index: 1;
+    .myLink{
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
 }

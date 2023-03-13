@@ -1,29 +1,27 @@
 <template>
-    <n-card :title="cardInfo.title">
-        <template #header-extra>
-
-        </template>
-        {{ cardInfo.description }}
-        <template #footer>
-
-        </template>
-        <template #action>
-            <!-- <statistic-button></statistic-button> -->
-            <div>
-                <router-link to="/detailsTest">Details</router-link>
-            </div>
-        </template>
-    </n-card>
+    <CCard>
+      <CCardBody>
+        <CCardTitle>{{ cardInfo.title }}</CCardTitle>
+        <CCardText>{{ cardInfo.description }}</CCardText>
+        <router-link to="/detailsTest">Details</router-link>
+      </CCardBody>
+    </CCard>
 </template>
 
 
 <script>
 import { defineComponent } from 'vue'
 import { NCard } from 'naive-ui'
+import { CCard, CCardBody, CCardTitle,CCardText,CButton } from '@coreui/vue';
 
 export default defineComponent({
     components: {
-        NCard
+        NCard,
+        CCard,
+        CCardBody,
+        CCardText,
+        CCardTitle,
+        CButton,
     },
     props: {
         cardInfo: {
@@ -31,8 +29,6 @@ export default defineComponent({
             required: true
         }
     }
-
-
 })
 
 </script>

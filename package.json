@@ -23,9 +23,13 @@
         "sass": "^1.56.1",
         "sass-loader": "^11.0.1",
         "vue": "^3.2.33",
-        "vue-loader": "^17.0.0"
+        "vue-loader": "^17.0.1",
+        "vue-template-compiler": "^2.7.14"
     },
     "dependencies": {
+        "@coreui/icons": "^3.0.1",
+        "@coreui/icons-vue": "^2.0.0",
+        "@coreui/vue": "^4.7.0",
         "pinia": "^2.0.14",
         "tiny-emitter": "^2.1.0",
         "vue-router": "^4.1.6"
