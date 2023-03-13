@@ -1,9 +1,6 @@
 version: "3.7"
 
-
-
 services:
-
   app:
       build:
         args:
@@ -19,7 +16,6 @@ services:
         - ./:/var/www
       networks:
         - morellato-network
-
   nginx:
       image: nginx:1.17-alpine
       container_name: morellato-nginx
@@ -31,8 +27,6 @@ services:
         - ./docker-compose/nginx:/etc/nginx/conf.d
       networks:
         - morellato-network
-
-
   nodejs:
     image: node:18.5.0-alpine3.16
     container_name: morellato-nodejs
@@ -41,7 +35,6 @@ services:
     working_dir: /var/www
     networks:
       - morellato-network
-
   php:
     image: php:8.1.0-fpm
     container_name: morellato-php
@@ -50,7 +43,6 @@ services:
     working_dir: /var/www
     networks:
       - morellato-network
-  
   database:
     image: mysql:5.7
     environment:
@@ -60,7 +52,6 @@ services:
       - "33066:3306"
     networks:
       - morellato-network
-
   phpmyadmin:
     image: "phpmyadmin/phpmyadmin"
     container_name: morellato-phpmyadmin
@@ -74,33 +65,6 @@ services:
       - "PMA_PASSWORD=secret"
     networks:
       - morellato-network
-
-
-  database:
-    image: mysql:5.7
-    environment:
-      - "MYSQL_ROOT_PASSWORD=secret"
-      - "MYSQL_DATABASE=morellato-db"
-    ports:
-      - "33066:3306"
-    networks:
-      - morellato-network
-
-  phpmyadmin:
-    image: "phpmyadmin/phpmyadmin"
-    container_name: morellato_phpmyadmin
-    links:
-      - database
-    ports:
-      - "8091:80"
-    environment:
-      - "PMA_HOST=database"
-      - "PMA_USER=root"
-      - "PMA_PASSWORD=secret"
-    networks:
-      - morellato-network
-
-
 networks:
   morellato-network:
     driver: bridge
